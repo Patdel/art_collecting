@@ -10,4 +10,10 @@
 
 <template name="creators">
   {{collecting}}
+  {{#each listOfArtists}} <!-- this has to be the name of the function, not the database-->
+    <ul>
+      <li><img src="{{picture}}"></li>
+      <li>{{name}}</li>
+    </ul>
+  {{/each}}
 </template>
