@@ -3,17 +3,46 @@
 </head>
 
 <body>
-  <h1>Art Kolector</h1>
 
-  {{> creators}}
+    <nav class="navbar navbar-default navbar-fixed-top">
+       <div class="container-fluid">
+         <div class="navbar-header">
+          <h1>Art Kollector</h1>
+         </div>
+       </div>
+    </nav>
+
+
+    <div class="container">
+
+      {{> creators}}
+    </div>
+
 </body>
 
 <template name="creators">
-  {{collecting}}
-  {{#each listOfArtists}} <!-- this has to be the name of the function, not the database-->
-    <ul>
-      <li><img src="{{picture}}"></li>
-      <li>{{name}}</li>
-    </ul>
+
+  <div class="row">
+    {{#each listOfArtists}} <!-- this has to be the name of the function, not the database-->
+      <div class="col-xs-12 col-md-3">
+        <div class="thumbnail">
+          <img src="{{picture}}">
+          <div class="caption">
+            <h3>{{name}}</h3>
+            <h6>Location: {{location}}</h6>
+            {{#each work}}
+               <h6>Title: {{title}}</h6>
+               <h6>Year: {{year}} </h6>
+               <h6>Medium: {{medium}} </h6>
+               <h6>Price: {{price}}</h6>
+           {{/each}}
+          </div>
+        </div>
+      </div>
   {{/each}}
+  </div>
+
 </template>
+
+
+

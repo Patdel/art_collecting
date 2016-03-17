@@ -18,9 +18,7 @@ var artist = [
 if (Meteor.isClient) {
 
 Template.creators.helpers({
-  collecting: function() {
-    return ("I love this piece!");
-  },
+
   listOfArtists: function() {
     return Artists.find();
   }
