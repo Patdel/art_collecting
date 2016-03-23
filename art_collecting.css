@@ -8,3 +8,8 @@ li {
   max-height: 500px;
   min-height: 500px;
 }
+
+.thin-border {
+  border-width: 3px;
+  border-color: red;
+}

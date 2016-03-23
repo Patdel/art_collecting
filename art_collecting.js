@@ -24,9 +24,17 @@ Template.creators.helpers({
 });
 
 Template.creators.events({
-  'click .thumbnail': function() {
+  'click .thumbnail': function(event) {
     var artistId = this._id;
     console.log(artistId);
+    // $(event.target).addClass("thin-border");
+  },
+  'mouseover .thumbnail': function(event) {
+    // $(event.target).addClass("thin-border");
+    $(event.target).addClass("thin-border");
+  },
+  'mouseout .thumbnail': function(event) {
+    $(event.target).removeClass("thin-border");
   }
 });
 
