@@ -39,7 +39,10 @@ Template.creators.events({
   'click .js-del-art': function() {
     var art_id = this._id;
     // console.log(art_id);
-    Artists.remove({"_id": art_id});
+    $('#'+art_id).hide('slow', function() {
+      Artists.remove({"_id": art_id});
+    });
+
   }
 });
 
