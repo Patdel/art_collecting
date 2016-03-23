@@ -30,10 +30,8 @@ Template.creators.events({
   }
 });
 
-
-
-
 }
+
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
