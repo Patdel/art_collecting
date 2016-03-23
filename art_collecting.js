@@ -45,9 +45,10 @@ if (Meteor.isServer) {
            year: "2004",
            medium: "mixed media"}],
     seller: "David Zwirner",
-    picture: "angelisagenzken.jpg"},
+    picture: "angelisagenzken.jpg"});
 
-      {name: "Chantal Akerman",
+      Artists.insert(
+        {name: "Chantal Akerman",
     mediums: ["video", "film"] ,
     location: "New York City, USA",
     work: [{title: "Nightfall on Shangai",
@@ -55,9 +56,11 @@ if (Meteor.isServer) {
            year: "2007",
            medium: "mixed media"}],
     seller: "David Zwirner",
-    picture: "nightfallonshangai.jpg"},
+    picture: "nightfallonshangai.jpg"}
+        );
 
-    {name: "Judith Bernstein",
+      Artists.insert(
+        {name: "Judith Bernstein",
     mediums: ["painting", "drawing"] ,
     location: "New York City, USA",
     work: [{title: "Five Panel Vertical",
@@ -65,9 +68,11 @@ if (Meteor.isServer) {
            year: "1973",
            medium: "mixed media"}],
     seller: "Mary Boone Gallery",
-    picture: "fivepanelvertical.jpg"},
+    picture: "fivepanelvertical.jpg"}
+        );
 
-    {name: "Maria Nordman",
+      Artists.insert(
+        {name: "Maria Nordman",
     mediums: ["sculpture", "film", "drawing"] ,
     location: "Berlin, Germany",
     work: [{title: "Ribes Nigrum",
@@ -75,9 +80,12 @@ if (Meteor.isServer) {
            year: "1991",
            medium: "pencil and ink on paper"}],
     seller: "Marian Goodman Gallery",
-    picture: "ribesnigrum.jpg"},
+    picture: "ribesnigrum.jpg"}
+        );
 
-    {name: "Subodh Gupta",
+
+    Artists.insert(
+      {name: "Subodh Gupta",
     mediums: ["sculpture", "installation"] ,
     location: "New Delhi, India",
     work: [{title: "Touch, Trace, Taste, Truth",
@@ -85,9 +93,12 @@ if (Meteor.isServer) {
            year: "2015",
            medium: "Steel"}],
     seller: "Hauser & Wirth",
-    picture: "touchtrace.jpg"},
+    picture: "touchtrace.jpeg"}
+      );
 
-    {name: "Anna Maria Maiolino",
+
+    Artists.insert(
+      {name: "Anna Maria Maiolino",
     mediums: ["sculpture", "photography"] ,
     location: "Sao Paulo, Brazil",
     work: [{title: "Little Snakes No 4",
@@ -96,11 +107,14 @@ if (Meteor.isServer) {
            medium: "molded plaster"}],
     seller: "Hauser & Wirth",
     picture: "littlesnakes.jpg"}
-
-    ); // insert function
+      );
     } //if statement
   }); //startup function
 } // if Server
+
+
+
+
 
 
 

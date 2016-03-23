@@ -4,4 +4,7 @@ li {
 .container {
   margin-top: 100px;
 }
-
+.thumbnail {
+  max-height: 500px;
+  min-height: 500px;
+}
