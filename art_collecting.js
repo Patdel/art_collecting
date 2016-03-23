@@ -31,10 +31,10 @@ Template.creators.events({
   // },
   'mouseover .thumbnail': function(event) {
     // $(event.target).addClass("thin-border");
-    $(event.target).addClass("thin-border");
+    $(event.currentTarget).addClass("thin-border");
   },
   'mouseout .thumbnail': function(event) {
-    $(event.target).removeClass("thin-border");
+    $(event.currentTarget).removeClass("thin-border");
   },
   'click .js-del-art': function() {
     var art_id = this._id;
