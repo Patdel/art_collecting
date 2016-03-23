@@ -24,17 +24,22 @@ Template.creators.helpers({
 });
 
 Template.creators.events({
-  'click .thumbnail': function(event) {
-    var artistId = this._id;
-    console.log(artistId);
+  // 'click .thumbnail': function(event) {
+  //   var artistId = this._id;
+  //   console.log(artistId);
     // $(event.target).addClass("thin-border");
-  },
+  // },
   'mouseover .thumbnail': function(event) {
     // $(event.target).addClass("thin-border");
     $(event.target).addClass("thin-border");
   },
   'mouseout .thumbnail': function(event) {
     $(event.target).removeClass("thin-border");
+  },
+  'click .js-del-art': function() {
+    var art_id = this._id;
+    // console.log(art_id);
+    Artists.remove({"_id": art_id});
   }
 });
 
@@ -116,6 +121,7 @@ if (Meteor.isServer) {
     seller: "Hauser & Wirth",
     picture: "littlesnakes.jpg"}
       );
+
     } //if statement
   }); //startup function
 } // if Server
